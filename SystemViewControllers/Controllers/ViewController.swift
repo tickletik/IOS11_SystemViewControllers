@@ -46,24 +46,30 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
-            print("User selected Camera Action")
-        })
-        
-        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
-            print("User selected Photo Library action")
-        })
-        
         alertController.addAction(cancelAction)
-        alertController.addAction(cameraAction)
-        alertController.addAction(photoLibraryAction)
         
-        alertController.popoverPresentationController?.sourceView = sender
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            })
+            
+            alertController.addAction(cameraAction)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            
+            let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
+                imagePicker.sourceType = .photoLibrary
+                self.present(imagePicker, animated: true, completion: nil)
+            })
+        
+            alertController.addAction(photoLibraryAction)
+        }
         
         present(alertController, animated: true, completion: nil)
-
     }
+    
     @IBAction func emailButtonAction(_ sender: UIButton) {
     }
     

@@ -22,30 +22,28 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func segmentTapped(_ sender: Any) {
+    @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         
-        if let sender = sender as? UISegmentedControl {
-            
-            let selectedSegment = sender.selectedSegmentIndex
-            if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
-                switch segmentTitle {
-                case "Share":
-                    shareAction(sender)
-                    break
-                case "Safari":
-                    safariAction()
-                    break
-                case "Camera":
-                    cameraAction()
-                    break
-                case "Email":
-                    emailAction()
-                    break
-                default:
-                    print("nothing chosen")
-                }
+        let selectedSegment = sender.selectedSegmentIndex
+        if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
+            switch segmentTitle {
+            case "Share":
+                shareAction(sender)
+                break
+            case "Safari":
+                safariAction()
+                break
+            case "Camera":
+                cameraAction()
+                break
+            case "Email":
+                emailAction()
+                break
+            default:
+                print("nothing chosen")
             }
         }
+        
     }
     
     func shareAction(_ sender: UISegmentedControl) {

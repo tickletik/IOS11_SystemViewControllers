@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SystemViewControllers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-dd-Iaq">
-                                <rect key="frame" x="16" y="36" width="343" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-dd-Iaq">
+                                <rect key="frame" x="16" y="36" width="288" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Ifh-H0-OMt"/>
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-xD-UjT">
-                                <rect key="frame" x="16" y="302" width="343" height="29"/>
+                                <rect key="frame" x="16" y="316" width="288" height="29"/>
                                 <segments>
                                     <segment title="Share"/>
                                     <segment title="Safari"/>
@@ -39,8 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UCI-xD-UjT" firstAttribute="top" secondItem="rqu-dd-Iaq" secondAttribute="bottom" constant="30" id="NPs-tY-y87"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rqu-dd-Iaq" secondAttribute="trailing" constant="16" id="Nxz-1h-VbP"/>
-                            <constraint firstItem="UCI-xD-UjT" firstAttribute="top" secondItem="rqu-dd-Iaq" secondAttribute="bottom" constant="16" id="R1h-Xq-N8g"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ULe-S1-9Id"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCI-xD-UjT" secondAttribute="trailing" constant="16" id="VJY-rY-93P"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="W1a-hc-yZw"/>

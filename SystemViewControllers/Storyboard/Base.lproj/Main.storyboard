@@ -24,36 +24,24 @@
                                     <constraint firstAttribute="height" constant="250" id="Ifh-H0-OMt"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r61-qT-p4A">
-                                <rect key="frame" x="16" y="302" width="343" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0F-wz-4Ef" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
-                                        <state key="normal" title="Share"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbp-kN-Ujd" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
-                                        <rect key="frame" x="86" y="0.0" width="85.5" height="30"/>
-                                        <state key="normal" title="Safari"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuY-Bd-otj" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
-                                        <rect key="frame" x="171.5" y="0.0" width="86" height="30"/>
-                                        <state key="normal" title="Camera"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7te-0a-iJM" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
-                                        <rect key="frame" x="257.5" y="0.0" width="85.5" height="30"/>
-                                        <state key="normal" title="Email"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-xD-UjT">
+                                <rect key="frame" x="16" y="302" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Share"/>
+                                    <segment title="Safari"/>
+                                    <segment title="Camera"/>
+                                    <segment title="Email"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r61-qT-p4A" secondAttribute="trailing" constant="16" id="KHI-sJ-UHV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rqu-dd-Iaq" secondAttribute="trailing" constant="16" id="Nxz-1h-VbP"/>
+                            <constraint firstItem="UCI-xD-UjT" firstAttribute="top" secondItem="rqu-dd-Iaq" secondAttribute="bottom" constant="16" id="R1h-Xq-N8g"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ULe-S1-9Id"/>
-                            <constraint firstItem="r61-qT-p4A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UgO-uJ-4jn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCI-xD-UjT" secondAttribute="trailing" constant="16" id="VJY-rY-93P"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="W1a-hc-yZw"/>
-                            <constraint firstItem="r61-qT-p4A" firstAttribute="top" secondItem="rqu-dd-Iaq" secondAttribute="bottom" constant="16" id="a8H-qk-Hci"/>
+                            <constraint firstItem="UCI-xD-UjT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bg6-BY-DmJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

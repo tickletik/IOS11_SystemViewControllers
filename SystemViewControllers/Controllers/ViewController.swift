@@ -23,13 +23,28 @@ class ViewController: UIViewController {
     @IBAction func segmentTapped(_ sender: Any) {
         
         if let sender = sender as? UISegmentedControl {
-            if sender.selectedSegmentIndex == 0 {
-                print("share")
-            }
             
             let selectedSegment = sender.selectedSegmentIndex
-            print("selected segment: \(selectedSegment)")
+            if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
+                switch segmentTitle {
+                case "Share":
+                    print("there is a share")
+                    break
+                case "Safari":
+                    print("going on safari")
+                    break
+                case "Camera":
+                    print("take a picture!")
+                    break
+                case "Email":
+                    print("send an email")
+                    break
+                default:
+                    print("nothing chosen")
+                }
+            }
         }
     }
+    
 }
 

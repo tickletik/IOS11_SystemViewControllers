@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -57,7 +58,10 @@ class ViewController: UIViewController {
     }
     
     func safariAction() {
-        print("going on safari")
+        if let url = URL(string: "http://www.apple.com") {
+            let safariViewController = SFSafariViewController(url: url)
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
     
     func cameraAction() {

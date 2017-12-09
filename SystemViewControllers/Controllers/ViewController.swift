@@ -32,13 +32,13 @@ class ViewController: UIViewController {
                 shareAction(sender)
                 break
             case "Safari":
-                safariAction()
+                safariAction(sender)
                 break
             case "Camera":
-                cameraAction()
+                photoAction(sender)
                 break
             case "Email":
-                emailAction()
+                emailAction(sender)
                 break
             default:
                 print("nothing chosen")
@@ -57,18 +57,18 @@ class ViewController: UIViewController {
         present(activityController, animated: true, completion: nil)
     }
     
-    func safariAction() {
+    func safariAction(_ sender: UISegmentedControl) {
         if let url = URL(string: "http://www.apple.com") {
             let safariViewController = SFSafariViewController(url: url)
             present(safariViewController, animated: true, completion: nil)
         }
     }
     
-    func cameraAction() {
+    func photosAction(_ sender: UISegmentedControl) {
         print("take a picture")
     }
     
-    func emailAction() {
+    func emailAction(_ sender: UISegmentedControl) {
         print("send an email")
     }
 }

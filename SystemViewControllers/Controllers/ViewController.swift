@@ -29,6 +29,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // dismiss Mail Controller
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     @IBAction func shareButtonAction(_ sender: UIButton) {
         guard let image = imageView.image else { return }
@@ -88,6 +93,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("can't send email!")
             return
         }
+        
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        
+        mailComposer.setToRecipients(["this.ronny@gmail.com"])
+        mailComposer.setSubject("Look at this")
+        mailComposer.setMessageBody("Hello, this is an email that I made", isHTML: false)
+        
+        present(mailComposer, animated: true, completion: nil)
     }
     
 

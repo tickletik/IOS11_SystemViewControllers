@@ -23,13 +23,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func shareButtonAction(_ sender: UIButton) {
+        guard let image = imageView.image else { return }
+        
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        activityController.popoverPresentationController?.sourceView = sender
+        
+        present(activityController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func safariButtonAction(_ sender: UIButton) {
+    }
+    @IBAction func photosButtonAction(_ sender: UIButton) {
+    }
+    @IBAction func emailButtonAction(_ sender: UIButton) {
+    }
+    
+    
+    
+    
+    
     @IBAction func segmentTapped(_ sender: UISegmentedControl) {
         
         let selectedSegment = sender.selectedSegmentIndex
         if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
             switch segmentTitle {
             case "Share":
-                shareAction(sender)
+                //shareAction(sender)
                 break
             case "Safari":
                 safariAction(sender)

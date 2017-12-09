@@ -36,23 +36,23 @@
                                     <action selector="segmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="LlF-nr-bCS"/>
                                 </connections>
                             </segmentedControl>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-Ka-MHV">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-Ka-MHV">
                                 <rect key="frame" x="16" y="360" width="288" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUL-Qr-avy">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUL-Qr-avy" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="30"/>
                                         <state key="normal" title="Share"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-e5-eHW">
-                                        <rect key="frame" x="72" y="0.0" width="72" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-e5-eHW" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
+                                        <rect key="frame" x="72" y="0.0" width="72.5" height="30"/>
                                         <state key="normal" title="Safari"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-pT-pn8">
-                                        <rect key="frame" x="144" y="0.0" width="72" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-pT-pn8" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
+                                        <rect key="frame" x="143.5" y="0.0" width="73" height="30"/>
                                         <state key="normal" title="Camera"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjG-2L-Vda">
-                                        <rect key="frame" x="216" y="0.0" width="72" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjG-2L-Vda" customClass="BorderedButton" customModule="SystemViewControllers" customModuleProvider="target">
+                                        <rect key="frame" x="215.5" y="0.0" width="72.5" height="30"/>
                                         <state key="normal" title="Email"/>
                                     </button>
                                 </subviews>

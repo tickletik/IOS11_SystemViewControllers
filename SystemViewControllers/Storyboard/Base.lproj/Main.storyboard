@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="250" id="Ifh-H0-OMt"/>
                                 </constraints>
                             </imageView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-xD-UjT">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-xD-UjT">
                                 <rect key="frame" x="16" y="302" width="343" height="29"/>
                                 <segments>
                                     <segment title="Share"/>

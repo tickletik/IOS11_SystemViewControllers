@@ -15,8 +15,10 @@ class BorderedButton: UIButton {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         layer.borderWidth = 1.0
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.lightGray.cgColor
         layer.cornerRadius = 2
+        
+        setTitleColor(UIColor.gray, for: UIControlState.normal)        
     }
 
 }

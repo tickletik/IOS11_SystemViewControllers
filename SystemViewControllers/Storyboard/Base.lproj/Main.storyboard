@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-dd-Iaq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lake" translatesAutoresizingMaskIntoConstraints="NO" id="rqu-dd-Iaq">
                                 <rect key="frame" x="16" y="36" width="343" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Ifh-H0-OMt"/>
@@ -53,4 +53,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="lake" width="610" height="430"/>
+    </resources>
 </document>

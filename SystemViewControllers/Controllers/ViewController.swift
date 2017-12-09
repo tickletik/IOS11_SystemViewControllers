@@ -28,16 +28,16 @@ class ViewController: UIViewController {
             if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
                 switch segmentTitle {
                 case "Share":
-                    print("there is a share")
+                    shareAction()
                     break
                 case "Safari":
-                    print("going on safari")
+                    safariAction()
                     break
                 case "Camera":
-                    print("take a picture!")
+                    cameraAction()
                     break
                 case "Email":
-                    print("send an email")
+                    emailAction()
                     break
                 default:
                     print("nothing chosen")
@@ -46,5 +46,20 @@ class ViewController: UIViewController {
         }
     }
     
+    func shareAction() {
+        print("sharing is caring")
+    }
+    
+    func safariAction() {
+        print("going on safari")
+    }
+    
+    func cameraAction() {
+        print("take a picture")
+    }
+    
+    func emailAction() {
+        print("send an email")
+    }
 }
 

@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
             if let segmentTitle = sender.titleForSegment(at: selectedSegment) {
                 switch segmentTitle {
                 case "Share":
-                    shareAction()
+                    shareAction(sender)
                     break
                 case "Safari":
                     safariAction()
@@ -46,8 +48,14 @@ class ViewController: UIViewController {
         }
     }
     
-    func shareAction() {
-        print("sharing is caring")
+    func shareAction(_ sender: UISegmentedControl) {
+        guard let image = imageView.image else { return }
+        
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        activityController.popoverPresentationController?.sourceView = sender
+        
+        present(activityController, animated: true, completion: nil)
     }
     
     func safariAction() {

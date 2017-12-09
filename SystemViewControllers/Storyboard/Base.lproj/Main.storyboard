@@ -36,15 +36,39 @@
                                     <action selector="segmentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="LlF-nr-bCS"/>
                                 </connections>
                             </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Dnx-Ka-MHV">
+                                <rect key="frame" x="16" y="360" width="288" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUL-Qr-avy">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Share"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKu-e5-eHW">
+                                        <rect key="frame" x="72" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Safari"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgB-pT-pn8">
+                                        <rect key="frame" x="144" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Camera"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MjG-2L-Vda">
+                                        <rect key="frame" x="216" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Email"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Dnx-Ka-MHV" firstAttribute="top" secondItem="UCI-xD-UjT" secondAttribute="bottom" constant="16" id="ATh-fz-NLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dnx-Ka-MHV" secondAttribute="trailing" constant="16" id="CQk-sb-L6y"/>
                             <constraint firstItem="UCI-xD-UjT" firstAttribute="top" secondItem="rqu-dd-Iaq" secondAttribute="bottom" constant="30" id="NPs-tY-y87"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rqu-dd-Iaq" secondAttribute="trailing" constant="16" id="Nxz-1h-VbP"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ULe-S1-9Id"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCI-xD-UjT" secondAttribute="trailing" constant="16" id="VJY-rY-93P"/>
                             <constraint firstItem="rqu-dd-Iaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="W1a-hc-yZw"/>
                             <constraint firstItem="UCI-xD-UjT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bg6-BY-DmJ"/>
+                            <constraint firstItem="Dnx-Ka-MHV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="eSK-5m-roY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

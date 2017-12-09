@@ -82,6 +82,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func emailButtonAction(_ sender: UIButton) {
+        // check if we have mail access
+        
+        guard MFMailComposeViewController.canSendMail() else {
+            print("can't send email!")
+            return
+        }
     }
     
 

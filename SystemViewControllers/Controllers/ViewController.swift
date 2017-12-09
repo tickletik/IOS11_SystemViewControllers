@@ -35,7 +35,7 @@ class ViewController: UIViewController {
                 safariAction(sender)
                 break
             case "Camera":
-                photoAction(sender)
+                photosAction(sender)
                 break
             case "Email":
                 emailAction(sender)
@@ -65,7 +65,13 @@ class ViewController: UIViewController {
     }
     
     func photosAction(_ sender: UISegmentedControl) {
-        print("take a picture")
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.popoverPresentationController?.sourceView = sender
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     func emailAction(_ sender: UISegmentedControl) {

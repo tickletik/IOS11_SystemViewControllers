@@ -45,9 +45,21 @@ class ViewController: UIViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        alertController.popoverPresentationController?.sourceView = sender
+       
+        let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { action in
+            print("User selected camera")
+        })
+        alertController.addAction(cameraAction)
         
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
+            print("Users selected Photo Library")
+        })
+        alertController.addAction(photoLibraryAction)
+        
+        alertController.popoverPresentationController?.sourceView = sender
         present(alertController, animated: true, completion: nil)
+        
+        
     }
     
     @IBAction func emailButtonAction(_ sender: UIButton) {

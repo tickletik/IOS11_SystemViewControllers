@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func shareButtonAction(_ sender: Any) {
+        
     }
+    
+    
+    
     @IBAction func safariButtonAction(_ sender: Any) {
     }
     @IBAction func photoButtonAction(_ sender: Any) {

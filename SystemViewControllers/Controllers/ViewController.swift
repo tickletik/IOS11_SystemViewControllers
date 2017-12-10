@@ -17,8 +17,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func shareButtonAction(_ sender: Any) {
+    @IBAction func shareButtonAction(_ sender: UIButton) {
         guard let image = imageView.image else { return }
+        
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+    
+        activityController.popoverPresentationController?.sourceView = sender
+        
+        present(activityController, animated: true, completion: nil)
     }
     
     

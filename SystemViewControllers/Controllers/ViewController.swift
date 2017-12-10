@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func shareButtonAction(_ sender: Any) {
-        
+        guard let image = imageView.image else { return }
     }
     
     

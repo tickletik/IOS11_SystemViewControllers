@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -30,7 +31,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func safariButtonAction(_ sender: Any) {
+        if let url = URL(string: "http://www.apple.com") {
+            
+            let safariViewController = SFSafariViewController(url: url)
+            
+            present(safariViewController, animated: true, completion: nil)
+        }
     }
+    
+    
     @IBAction func photoButtonAction(_ sender: Any) {
     }
     @IBAction func emailButtonAction(_ sender: Any) {

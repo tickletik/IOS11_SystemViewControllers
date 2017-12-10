@@ -55,7 +55,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         alertController.addAction(cameraAction)
         
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default, handler: { action in
-            print("Users selected Photo Library")
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
         })
         alertController.addAction(photoLibraryAction)
         

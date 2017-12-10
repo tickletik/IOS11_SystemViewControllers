@@ -40,9 +40,13 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func photoButtonAction(_ sender: Any) {
+    @IBAction func photoButtonAction(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        
+        present(alertController, animated: true, completion: nil)
     }
-    @IBAction func emailButtonAction(_ sender: Any) {
+    
+    @IBAction func emailButtonAction(_ sender: UIButton) {
     }
     
 }
